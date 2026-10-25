@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<section class="text-center mb-5">
+    <h1 class="display-4 fw-bold text-dark">Plataforma de Inscripciones eSports</h1>
+    <p class="lead text-muted">Gestión de participantes y registro de jugadores para torneos universitarios.</p>
+    <a class="btn btn-primary btn-lg mt-2" asp-controller="Jugadores" asp-action="Crear">Inscribirme ahora</a>
+</section>
+
+<section class="mb-5">
+    <h2 class="h4 mb-4 border-start border-4 border-primary ps-2">Torneos Disponibles</h2>
+    <div class="row g-4">
+        <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm tarjeta-torneo">
+                <div class="card-body">
+                    <h3 class="card-title h5 text-primary">Liga MOBA</h3>
+                    <p class="card-text">Competencia 5v5 para League of Legends y Dota 2. Demuestra tus habilidades tácticas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm tarjeta-torneo">
+                <div class="card-body">
+                    <h3 class="card-title h5 text-danger">Copa FPS</h3>
+                    <p class="card-text">Torneo de disparos en primera persona para VALORANT y Counter-Strike 2.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm tarjeta-torneo">
+                <div class="card-body">
+                    <h3 class="card-title h5 text-success">Circuito F2P</h3>
+                    <p class="card-text">Encuentros individuales y de supervivencia estilo Battle Royale y juegos de pelea.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

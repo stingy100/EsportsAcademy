@@ -1,0 +1,52 @@
+@model Jugador
+@{
+    ViewData["Title"] = "Inscripción";
+    var juegos = new[] { "League of Legends", "Dota 2", "VALORANT", "Counter-Strike 2", "Fortnite", "Rocket League" };
+}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+        <div class="p-4 bg-white rounded border shadow-sm">
+            <h2 class="h4 mb-3 text-dark">Registro de Jugador</h2>
+
+            <form asp-action="Crear" method="post" novalidate>
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label fw-semibold"></label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Ej. Carlos Pérez" />
+                    <span asp-validation-for="Nombre" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Juego" class="form-label fw-semibold"></label>
+                    <select asp-for="Juego" class="form-select">
+                        <option value="">Seleccione un juego...</option>
+                        @foreach (var g in juegos)
+                        {
+                            <option value="@g" selected="@(Model.Juego == g)">@g</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Juego" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Rol" class="form-label fw-semibold"></label>
+                    <input asp-for="Rol" class="form-control" placeholder="Ej. Capitán / Duelista / Coach" />
+                    <span asp-validation-for="Rol" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Edad" class="form-label fw-semibold"></label>
+                    <input asp-for="Edad" type="number" class="form-control" />
+                    <span asp-validation-for="Edad" class="text-danger small"></span>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary fw-bold flex-grow-1">Registrar Participante</button>
+                    <a class="btn btn-outline-secondary" asp-action="Index">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
