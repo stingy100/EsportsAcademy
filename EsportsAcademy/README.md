@@ -1,8 +1,8 @@
 # eSports Academy - ASP.NET Core MVC
 
-**Autor:** Sting Mauricio Ramires
+**Autor:** Sting Mauricio Ramirez
 **Institución:** Institución Universitaria de Envigado (IUE)
-**Curso:** [NOMBRE DE TU CURSO] - Seguimiento 03
+**Curso:** programacion web- Seguimiento 
 
 ## Descripción
 Aplicación web para la inscripción de jugadores en torneos universitarios de eSports
@@ -12,8 +12,7 @@ formulario con validación, consultarlos en una lista y eliminarlos.
 ## Enlaces
 - **Aplicación publicada:** (https://esportsacademy.onrender.com)
 - **Repositorio:** https://github.com/stingy100/EsportsAcademy
-- **Video de sustentación:** [PEGA AQUÍ EL ENLACE DE TEAMS]
-
+- **Video de sustentación:**
 ## Tecnologías
 - ASP.NET Core MVC (.NET 8) y C#
 - Razor (.cshtml), HTML, CSS y Bootstrap 5
