@@ -8,6 +8,7 @@ RUN dotnet publish -c Release -o /app
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app ./
-ENV ASPNETCORE_URLS=http://+:8080
+# Render define la variable PORT; si no existe se usa 8080
+ENV PORT=8080
 EXPOSE 8080
-ENTRYPOINT ["dotnet", "EsportsAcademy.dll"]
+CMD ["sh", "-c", "ASPNETCORE_URLS=http://+:${PORT} dotnet EsportsAcademy.dll"]
